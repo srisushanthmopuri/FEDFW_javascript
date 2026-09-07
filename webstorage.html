@@ -1,0 +1,74 @@
+5786699,v
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Storage</title>
+     <script>
+        function saveData() {
+            localStorage.setItem("username",
+                document.getElementById("username").value);
+
+            localStorage.setItem("password",
+                document.getElementById("password").value);
+
+            document.getElementById("output").innerHTML =
+                "Data Saved Successfully";
+        }
+
+        function loadData() {
+            document.getElementById("username").value =
+                localStorage.getItem("username") || "";
+
+            document.getElementById("password").value =
+                localStorage.getItem("password") || "";
+
+            document.getElementById("output").innerHTML =
+                "Data Loaded Successfully";
+        }
+
+        function clearData() {
+            localStorage.clear();
+
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+
+            document.getElementById("output").innerHTML =
+                "Data Cleared Successfully";
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Web Storage Example</h2>
+
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <td>
+                <input type="text" id="username">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Password</th>
+            <td>
+                <input type="password" id="password">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Actions</th>
+            <td>
+                <button onclick="saveData()">SaveData</button>
+                <button onclick="loadData()">LoadData</button>
+                <button onclick="clearData()">ClearData</button>
+            </td>
+        </tr>
+    </table>
+    <p>Local storage: <span id="local-storage"></span></p>
+    <table border="1" align="center" width="50%" id="result">
+        <caption>Local Storage</caption>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+    <script>
+        function add(x,y){
+            return x+y;
+        }
+        function sub(x,y){
+            return x-y;
+        }
+        function mul(x,y){
+            return x*y;
+        }
+        function div(x,y){
+            return x/y;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3 style="color: aqua; text-align: center;">
+        Inline JavaScript
+    </h3>
+
+    <button 
+        onclick="alert('Welcome to JavaScript')"
+        style="
+            color: brown;
+            padding: 10px;
+            margin: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            background-color: rgb(126, 126, 255);
+            font-size: 10px;
+        ">
+        Click me!
+    </button>
+    <p>
+        Enter the num1: <input type="text" id="first" placeholder="Enter the number"/>
+    </p>
+    <p>
+        Enter the num2: <input type="text" id="second" placeholder="enter the number"/>
+    </p>
+    ,<button onclick="add()">Add </button>
+    <button onclick="sub()">Sub </button>
+    <button onclick="mul()">Mul </button>
+    <button onclick="div()">Div </button>
+</body>
+</html>
